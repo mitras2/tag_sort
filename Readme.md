@@ -11,7 +11,7 @@ A header/title (e.g. the name of an interviewed person) for the next text blocks
 Every textblock has a simple structure:
 
 ```
-<empty line>
+                                                      (empty line)
 Header od the Textblock as plaintext in one line
 ### As many tags as you wish
 ### preceeded by three hastags
@@ -19,7 +19,7 @@ The long, long textblock
 containing the statement or 
 any thing else you want to sort/group with
 this script
-<empty line>
+                                                       (empty line)
 ```
 
 A textblock is alwas surrounded by empty lines, the first line is a header, all following lines containing three hastags are tags and al the text until the next empty line is the content of the textblock.
