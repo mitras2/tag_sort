@@ -1,8 +1,8 @@
 import re
 import os
 
-f  = open('aussagen.txt', 'r')
-print('test')
+f  = open('input.txt', 'r')
+#print('test')
 
 
 def readBlock(file):
@@ -69,11 +69,11 @@ def readBlock(file):
 
 
 def writeBlocksToFile(blocks):
-    if not os.path.exists('Output/'):
-        os.makedirs('Output/')
+    if not os.path.exists('output/'):
+        os.makedirs('output/')
     
     for tag in blocks:
-        s = 'Output/' + tag
+        s = 'output/' + tag + '.txt'
         w  = open(s, 'w')
 
         w.write(tag)
@@ -82,16 +82,13 @@ def writeBlocksToFile(blocks):
 
         for block in blocks[tag]:
             w.write(block)
+            w.write('(' + tag + ')')
             w.write('\n')
 
         w.write('\n')
         w.write('\n')
-        w.write('\n')
         w.close()
         
-            
-        
-
 
 blocks = readBlock(f)
 writeBlocksToFile(blocks)
